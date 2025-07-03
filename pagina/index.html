@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SITMES</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/material-design-iconic-font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos para el video de fondo en el footer */
+    .my-hero {
+      position: relative; /* Asegura que el video se posicione correctamente dentro de este contenedor */
+      overflow: hidden; /* Oculta cualquier parte del video que se salga del contenedor */
+      height: 400px; /* Ajusta la altura de tu footer según sea necesario para el video */
+      display: flex; /* Para centrar el contenido si lo hay sobre el video */
+      align-items: center;
+      justify-content: center;
+      color: white; /* Color del texto para que se vea sobre el video */
+      /* Eliminamos --banner y --bg-atachment porque ya no se usará la imagen de fondo */
+    }
+
+    .footer-video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0; /* Envía el video al fondo */
+    }
+
+    .footer-video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container-hero {
+      position: relative;
+      z-index: 1; /* Asegura que el contenido del footer esté por encima del video */
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad del texto */
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <header class="navbar-header" id="navbar-header">
+      <a href="#" class="brand-link is-size-3">
+        
+        <span class="brand">SITMES</span>
+      </a>
+      <button class="navbar-menu-mobile open is-size-3 is-hidden-desktop" id="navbar-menu-mobile">
+        <i class="zmdi zmdi-menu"></i>
+      </button>
+    </header>
+    <ul class="navbar-container" id="navbar-container">
+      <li class="navbar-item">
+        <a data-scroll href="#top" id="inicio" class="navbar-a navbar-link-active">Inicio</a>
+      </li>
+      <li class="navbar-item">
+        <a data-scroll href="#about" id="acercaDe" class="navbar-a">Nosotros</a>
+      </li>
+      <li class="navbar-item">
+        <a data-scroll href="#section2" id="section" class="navbar-a">Servicios</a>
+      </li>
+      <li class="navbar-item">
+        <a data-scroll href="#gallery" id="photos" class="navbar-a">Proyectos</a>
+      </li>
+      <li class="navbar-item">
+        <a data-scroll href="#contacto" id="form" class="navbar-a">Contacto</a>
+      </li>
+    </ul>
+
+  </nav>
+  <div class="section-body" id="top">
+    <div class="slide-contenedor">
+      <div class="miSlider fade">
+        <div class="slider-body">
+          <span class="tag-slider is-size-5-desktop">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotécnia</h2>
+          <p class="description-slider is-size-7-mobile"> Servicios de perforación a diamantina. </p>
+        </div>
+        <img src="img/slider-1.jpg" alt="">
+      </div>
+      <div class="miSlider fade">
+        <div class="slider-body">
+          <span class="tag-slider">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotécnia</h2>
+          <p class="description-slider is-size-7-mobile"> Servicios de perforación a diamantina. </p>
+        </div>
+        <img src="img/slider-2.jpg" alt="">
+      </div>
+      <div class="miSlider fade">
+        <div class="slider-body">
+          <span class="tag-slider">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotécnia</h2>
+          <p class="description-slider is-size-7-mobile"> Servicios de perforación a diamantina. </p>
+        </div>
+        <img src="img/slider-3.jpg" alt="">
+      </div>
+      <div class="direcciones">
+        <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+        <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="posicionSlide(1)"></span>
+        <span class="dot" onclick="posicionSlide(2)"></span>
+        <span class="dot" onclick="posicionSlide(3)"></span>
+      </div>
+    </div>
+
+    <footer class="my-footer">
+      <div class="hero my-hero">
+        <div class="footer-video-background">
+          <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+          </video>
+        </div>
+
+        <div class="container-hero">
+          <div class="columns is-multiline">
+            <div class="column is-full has-text-centered">
+            </div>
+            
+            <div class="column has-text-centered is-size-7-mobile is-full">
+              <p class="footer-p has-text-white">© 2025. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/smooth-scroll.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
